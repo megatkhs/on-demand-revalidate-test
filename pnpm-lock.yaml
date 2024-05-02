@@ -5,34 +5,40 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  destyle.css:
+    specifier: 4.0.1
+    version: 4.0.1
   next:
     specifier: 14.2.3
     version: 14.2.3(react-dom@18.3.1)(react@18.3.1)
   react:
-    specifier: ^18
+    specifier: 18.3.1
     version: 18.3.1
   react-dom:
-    specifier: ^18
+    specifier: 18.3.1
     version: 18.3.1(react@18.3.1)
 
 devDependencies:
   '@types/node':
-    specifier: ^20
+    specifier: 20.12.8
     version: 20.12.8
   '@types/react':
-    specifier: ^18
+    specifier: 18.3.1
     version: 18.3.1
   '@types/react-dom':
-    specifier: ^18
+    specifier: 18.3.0
     version: 18.3.0
   eslint:
-    specifier: ^8
+    specifier: '8'
     version: 8.57.0
   eslint-config-next:
     specifier: 14.2.3
     version: 14.2.3(eslint@8.57.0)(typescript@5.4.5)
+  prettier:
+    specifier: 3.2.5
+    version: 3.2.5
   typescript:
-    specifier: ^5
+    specifier: 5.4.5
     version: 5.4.5
 
 packages:
@@ -692,6 +698,10 @@ packages:
     resolution: {integrity: sha512-0je+qPKHEMohvfRTCEo3CrPG6cAzAYgmzKyxRiYSSDkS6eGJdyVJm7WaYA5ECaAD9wLB2T4EEeymA5aFVcYXCA==}
     engines: {node: '>=6'}
     dev: true
+
+  /destyle.css@4.0.1:
+    resolution: {integrity: sha512-G9iyW0JfRkgdxhbWQeuLdO1KZ40nzKssHtArbSFvaU/w44G0cZ5v3u4bHY829INSu480J/fxae+lTm225mN3Vw==}
+    dev: false
 
   /dir-glob@3.0.1:
     resolution: {integrity: sha512-WkrWp9GR4KXfKGYzOLmTuGVi1UWFfws377n9cc55/tb6DuqyF6pcQ5AbiHEshaDpY9v6oaSr2XCDidGmMwdzIA==}
@@ -1971,6 +1981,12 @@ packages:
   /prelude-ls@1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
+    dev: true
+
+  /prettier@3.2.5:
+    resolution: {integrity: sha512-3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==}
+    engines: {node: '>=14'}
+    hasBin: true
     dev: true
 
   /prop-types@15.8.1:
