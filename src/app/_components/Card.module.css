@@ -1,0 +1,33 @@
+.card {
+  position: relative;
+  padding: 16px;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+}
+
+.visual {
+  width: 100%;
+  height: auto;
+}
+
+.title {
+  margin-top: 16px;
+  font-weight: bold;
+}
+
+.link {
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    user-select: none;
+  }
+}
+
+.category {
+  margin-top: 8px;
+  position: relative;
+  z-index: 1;
+  color: deepskyblue;
+  font-size: 0.9rem;
+}
