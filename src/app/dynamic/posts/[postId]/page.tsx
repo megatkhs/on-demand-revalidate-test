@@ -1,8 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { client } from 'libs/microcms'
-import styles from './page.module.css'
 import { BLOG_POST_ALL, BLOG_POST_BY_ID } from 'constants/tags'
-import Link from 'next/link'
 import { Article } from 'app/_components/Article'
 import { notFound } from 'next/navigation'
 
@@ -10,6 +8,14 @@ type PostProps = {
   params: {
     postId: string
   }
+}
+
+export async function generateStaticParams(): Promise<PostProps['params'][]> {
+  const categories = await client.getAllContents('blogs')
+
+  return categories.map(({ id }) => ({
+    postId: id,
+  }))
 }
 
 export default async function Post({ params }: PostProps) {
