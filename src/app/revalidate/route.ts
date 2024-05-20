@@ -4,10 +4,12 @@ import { NextRequest, NextResponse } from 'next/server'
 export const GET = (request: NextRequest): NextResponse => {
   const searchParams = request.nextUrl.searchParams
 
-  const tags = searchParams.get('tags')
+  const tagsParams = searchParams.get('tags')
 
-  if (tags !== null) {
-    tags.split(',').forEach(revalidateTag)
+  if (tagsParams !== null) {
+    const tags = tagsParams.split(',')
+    console.log(tags)
+    tags.forEach((tag) => revalidateTag(tag))
 
     return NextResponse.json({
       success: true,
